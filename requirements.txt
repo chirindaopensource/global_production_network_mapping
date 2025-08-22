@@ -1,0 +1,103 @@
+﻿# =============================================================================
+# Requirements for High-Resolution Digital Twin of Global Production Network
+# =============================================================================
+#
+# This requirements.txt file specifies all third-party dependencies needed
+# for the complete implementation of "Deciphering the global production network
+# from cross-border firm transactions" by O'Clery et al. (2025).
+#
+# The version specifications follow semantic versioning principles:
+# - Major versions are pinned to ensure API compatibility
+# - Minor versions allow for bug fixes and performance improvements
+# - Critical packages use more restrictive versioning for stability
+#
+# Installation: pip install -r requirements.txt
+#
+# Python Version Requirement: >=3.8,<4.0
+# =============================================================================
+
+# Core Data Manipulation and Numerical Computing
+# ---------------------------------------------
+# NumPy: Fundamental package for scientific computing with Python
+# Used for: Vectorized operations, matrix algebra, array manipulations
+numpy>=1.21.0,<2.0.0
+
+# Pandas: Powerful data structures and data analysis tools
+# Used for: DataFrame operations, data cleaning, ETL pipelines
+pandas>=1.5.0,<3.0.0
+
+# Network Analysis and Graph Theory
+# ---------------------------------
+# NetworkX: Python library for creation, manipulation, and study of complex networks
+# Used for: Graph construction, centrality measures, network metrics
+networkx>=3.0.0,<4.0.0
+
+# python-igraph: High performance graph analysis library
+# Used for: Efficient graph algorithms, community detection, network visualization
+# Note: Installs as 'python-igraph' but imports as 'igraph'
+python-igraph>=0.10.0,<1.0.0
+
+# leidenalg: Implementation of the Leiden algorithm for community detection
+# Used for: Advanced community detection, network partitioning
+# Requires: python-igraph as dependency
+leidenalg>=0.9.0,<1.0.0
+
+# Scientific and Statistical Computing
+# ------------------------------------
+# SciPy: Fundamental algorithms for scientific computing
+# Used for: Sparse matrices, statistical functions, optimization
+scipy>=1.9.0,<2.0.0
+
+# Econometric and Statistical Modeling
+# ------------------------------------
+# statsmodels: Statistical modeling and econometrics
+# Used for: Probit models, panel data analysis, fixed effects regression
+statsmodels>=0.14.0,<1.0.0
+
+# Machine Learning and Model Evaluation
+# -------------------------------------
+# scikit-learn: Machine learning library
+# Used for: ROC curves, AUC calculation, model evaluation metrics
+scikit-learn>=1.2.0,<2.0.0
+
+# Parallel Processing and Performance
+# ----------------------------------
+# joblib: Lightweight pipelining and parallel computing
+# Used for: Efficient parallelization of computationally intensive tasks
+joblib>=1.2.0,<2.0.0
+
+# Optional Development and Analysis Dependencies
+# ---------------------------------------------
+# The following packages are recommended for enhanced functionality:
+
+# matplotlib: Plotting library for data visualization
+# Used for: Network visualizations, statistical plots, results presentation
+matplotlib>=3.6.0,<4.0.0
+
+# seaborn: Statistical data visualization
+# Used for: Enhanced plotting capabilities, correlation matrices
+seaborn>=0.12.0,<1.0.0
+
+# tqdm: Progress bars for long-running computations
+# Used for: Progress tracking during network inference and validation
+tqdm>=4.64.0,<5.0.0
+
+# jupyter: Interactive computing environment
+# Used for: Exploratory data analysis, result presentation
+jupyter>=1.0.0,<2.0.0
+
+# Optional Performance Enhancements
+# ---------------------------------
+# numba: JIT compiler for Python functions
+# Used for: Accelerating numerical computations in tight loops
+numba>=0.58.0,<1.0.0
+
+# Optional Large-Scale Data Processing
+# -----------------------------------
+# dask: Parallel computing with task scheduling
+# Used for: Out-of-core computation for datasets exceeding memory
+dask[complete]>=2023.1.0,<2024.0.0
+
+# pyarrow: Columnar in-memory analytics
+# Used for: Efficient serialization and fast I/O operations
+pyarrow>=10.0.0,<15.0.0
